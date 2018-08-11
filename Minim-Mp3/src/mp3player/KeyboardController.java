@@ -18,7 +18,7 @@ public class KeyboardController {
 			//Switch mit command
 			if(command.equals("play")) {
 				mp3player.play("02_LoveWillBeWithYou.mp3");
-				return;
+				//return;
 			}
 		}
 	}

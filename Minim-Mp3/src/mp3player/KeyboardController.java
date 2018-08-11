@@ -11,14 +11,21 @@ public class KeyboardController {
 	}
 	
 	public void start() {
-		while(playing) {
+		while(playing == true) {
 			System.out.println("Was soll der Player machen?");
 			String command = StaticScanner.nextString();
 			
 			//Switch mit command
-			if(command.equals("play")) {
-				mp3player.play("02_LoveWillBeWithYou.mp3");
-				//return;
+			switch(command) {
+			case "play":{
+				mp3player.load("02_LoveWillBeWithYou.mp3");
+				mp3player.play();
+				break;
+				}
+			case "pause":{
+				mp3player.pause();
+				break;
+				}
 			}
 		}
 	}
